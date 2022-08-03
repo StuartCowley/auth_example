@@ -1,22 +1,22 @@
-# React Exercise for FE module at Manchester codes
+# Authorisation and Authentication demo for FE module
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-The list of goals for this exercise is:
+The `start` branch is your jumping off point, a simple React app has been created consisting of a `home`, `account` and `login` pages. 
 
-- demonstrate how to create simple functional components,
-- show practical examples of React Hooks application
-- implementation of custom hooks
-- implementation of styled components.
-- proper use of state including props
+The desired behaviour is for the user to be shown the `account` page when they are logged in, otherwise they should be redirected to the `login` component when trying clicking the `account` link.
+At this starting point, this behaviour is hard-coded as the app has no knowledge of the authenticated status of the user (as it hasn't been created yet!)
 
-## Available Scripts
+The app does not use a back end for authentication, for the purposes of demonstrating the mechanics and workflow a fake login process is used which will mimic the response of a real API (in the case of JWT, by returning an an authentication token). See `utils/fakeLogin.js`
 
-In the project directory, you can run:
+## Packages used
+- dotenv
+- jsonwebtoken
+- jwt-decode
+- react test renderer
 
-### `npm start`
+## Installation and checking out branches
+Clone down this repo and run `npm install`. Checkout the `start` branch to try and create the solution yourself, or checkout the relevant solution branch to see an implementation.
+To checkout a branch you do not have locally but is present on the remote repository, use command `git checkout -t origin/branchname-here`, or once you have the branches locally use `git switch branchname-here`.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Available scripts
+- `npm start`
+- `npm test`
